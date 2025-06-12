@@ -1,0 +1,3 @@
+[tool.setuptools.package-dir]
+# See README.md as to why matplotlib is not included
+"lmfit-stubs" = "lmfit"
