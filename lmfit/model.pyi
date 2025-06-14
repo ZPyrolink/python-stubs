@@ -102,7 +102,7 @@ class Model:
 
     def fit(
             self,
-            data,
+            data: np.ndarray,
             params: Parameters | None = None,
             weights: np.ndarray | None = None,
             method: _MinimizeMethod = 'leastsq',
