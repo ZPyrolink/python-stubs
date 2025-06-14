@@ -1,15 +1,10 @@
 from typing import Callable, Iterable, Literal, Protocol
 
-type _NanPolicy = Literal[
-    "raise",
-    "propagate",
-    "omit"
-]
+import numpy as np
 
-type _ReduceFcn = Literal[
-                      "negentropy",
-                      "neglogcauchy"
-                  ] | Callable
+type _NanPolicy = Literal["raise", "propagate", "omit"]
+
+type _ReduceFcn = Literal["negentropy", "neglogcauchy"] | Callable
 
 type _FitMethod = Literal[
     "Nelder-Mead",
@@ -57,6 +52,14 @@ type _MinimizeMethod = Literal[
     "dual_annealing"
 ]
 
+type _Reducer = Literal["real", "imag", "abs", "angle"]
+
+type _EvalResult = np.ndarray | float | int | complex
+
+type _EvalOp = Callable[[_EvalResult, _EvalResult], _EvalResult]
+
+type _CorrelMode = Literal["list", "table"]
+
 
 class _PoolLike[_S, _T](Protocol):
     def map(
@@ -65,3 +68,15 @@ class _PoolLike[_S, _T](Protocol):
             iterable: Iterable[_S],
             chunksize: int | None = None
     ) -> list[_T]: ...
+
+
+class _ArrayLike(Protocol):
+    def __array__(self): ...
+
+
+class _Writable(Protocol):
+    def write(self, content: str, /) -> int: ...
+
+
+class _Readable(Protocol):
+    def read(self, size: int | None = ..., /) -> str: ...
