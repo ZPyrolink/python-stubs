@@ -64,6 +64,8 @@ type _TermalDistribution = Literal["bose", "maxwell", "fermi"]
 
 type _StepForm = Literal["linear", "atan", "erf", "logistic"]
 
+type _Fmt = Literal["g", "e", "f"]
+
 
 class _PoolLike[_S, _T](Protocol):
     def map(
