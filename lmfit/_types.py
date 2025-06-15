@@ -60,6 +60,10 @@ type _EvalOp = Callable[[_EvalResult, _EvalResult], _EvalResult]
 
 type _CorrelMode = Literal["list", "table"]
 
+type _TermalDistribution = Literal["bose", "maxwell", "fermi"]
+
+type _StepForm = Literal["linear", "atan", "erf", "logistic"]
+
 
 class _PoolLike[_S, _T](Protocol):
     def map(
