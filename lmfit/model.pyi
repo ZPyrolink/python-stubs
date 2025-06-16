@@ -3,10 +3,10 @@ from typing import Any, Callable, NoReturn
 import matplotlib.pyplot as plt
 import numpy as np
 
-from ._types import _ArrayLike, _CorrelMode, _EvalOp, _EvalResult, _MinimizeMethod, _NanPolicy, _Readable, _Reducer, \
+from lmfit._types import _ArrayLike, _CorrelMode, _EvalOp, _EvalResult, _MinimizeMethod, _NanPolicy, _Readable, _Reducer, \
     _Writable
-from .minimizer import Minimizer
-from .parameter import Parameters
+from lmfit.minimizer import Minimizer
+from lmfit.parameter import Parameters
 
 tiny: float
 

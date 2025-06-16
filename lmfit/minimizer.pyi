@@ -4,9 +4,9 @@ import emcee
 import numpy as np
 import numpy.typing as npt
 import pandas as pd
+from lmfit.parameter import Parameters
 
-from ._types import _FitMethod, _FloatBehavior, _MinimizeMethod, _NanPolicy, _PoolLike, _ReduceFcn
-from .parameter import Parameters
+from lmfit._types import _FitMethod, _FloatBehavior, _MinimizeMethod, _NanPolicy, _PoolLike, _ReduceFcn
 
 HAS_EMCEE: bool
 HAS_PANDAS: bool

@@ -1,9 +1,8 @@
 from typing import Any, Callable, Final, Literal, overload
 
 import numpy as np
-
-from .minimizer import Minimizer, MinimizerResult
-from .parameter import Parameter, Parameters
+from lmfit.minimizer import Minimizer, MinimizerResult
+from lmfit.parameter import Parameter, Parameters
 
 CONF_ERR_GEN: Final[str]
 CONF_ERR_STDERR: Final[str]

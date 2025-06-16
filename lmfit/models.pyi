@@ -3,10 +3,10 @@ from typing import Callable, ClassVar, Final, Literal, LiteralString, Self
 
 import numpy as np
 from asteval import asteval
+from lmfit.model import Model as Model, ModelResult
+from lmfit.parameter import Parameters
 
 from lmfit._types import _EvalResult, _MinimizeMethod, _NanPolicy, _StepForm, _TermalDistribution
-from .model import Model as Model, ModelResult
-from .parameter import Parameters
 
 tau: float
 
