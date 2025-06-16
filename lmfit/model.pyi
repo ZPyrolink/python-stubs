@@ -2,11 +2,12 @@ from typing import Any, Callable, NoReturn
 
 import matplotlib.pyplot as plt
 import numpy as np
-
-from lmfit._types import _ArrayLike, _CorrelMode, _EvalOp, _EvalResult, _MinimizeMethod, _NanPolicy, _Readable, _Reducer, \
-    _Writable
 from lmfit.minimizer import Minimizer
 from lmfit.parameter import Parameters
+
+from lmfit._types import _ArrayLike, _CorrelMode, _EvalOp, _EvalResult, _MinimizeMethod, _NanPolicy, _Readable, \
+    _Reducer, \
+    _Writable
 
 tiny: float
 
@@ -277,7 +278,7 @@ class ModelResult(Minimizer):
             self,
             ax: plt.Axes | None = None,
             datafmt: str = 'o',
-            yerr: np.ndarray[] | None = None,
+            yerr: np.ndarray | None = None,
             data_kws: dict | None = None,
             fit_kws: dict | None = None,
             ax_kws: dict | None = None,
