@@ -1,5 +1,5 @@
 import _ast
-from typing import Callable, ClassVar, Final, Literal, LiteralString, Self
+from typing import Callable, ClassVar, Final, Literal, LiteralString
 
 import numpy as np
 from asteval import asteval
@@ -51,7 +51,7 @@ COMMON_GUESS_DOC: str
 
 
 def _default__init__(
-        self: Self,
+        self,
         independent_vars: list[str] = ['x'],
         prefix: str = '',
         nan_policy: _NanPolicy = 'raise',
@@ -60,7 +60,7 @@ def _default__init__(
 
 
 def _default_eval(
-        self: Self,
+        self,
         params: Parameters | None = None,
         *,
         x: np.ndarray,
@@ -69,7 +69,7 @@ def _default_eval(
 
 
 def _default_fit(
-        self: Self,
+        self,
         data,
         params: Parameters | None = None,
         weights: np.ndarray | None = None,
@@ -114,7 +114,7 @@ class _FormModel[_Lit](Model):
 
 
 def _negative_guess(
-        self: Self,
+        self,
         data: np.ndarray,
         x: np.ndarray,
         negative: bool = False,
