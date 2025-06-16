@@ -1,3 +1,7 @@
+[project]
+name = "python-stubs"
+version = "0.1.0"
+
 [tool.setuptools.package-dir]
 # See README.md as to why matplotlib is not included
 "lmfit-stubs" = "lmfit"
